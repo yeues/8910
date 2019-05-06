@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{margin: 0;padding: 0;}
+    a{text-decoration: none;}
+    li{list-style: none;}
+    body{background: pink; font-size: 12px;
+        font-family:"微软雅黑" ;padding: 100px;}
+    .tab{width: 249px;}
+    .tab-nav{height: 30px;}    
+    .tab-nav li{float: left;margin-right: 5px;
+        /* background-color: purple; */
+        border: 1px black solid;
+        border-radius: 3px 3px 0px 0px;}
+    .tab-nav li a{
+        display: inline-block;height: 30px;
+        padding: 0 20px;color: black;line-height: 30px;
+    }
+    .content-wrap{
+        height: 200px;padding: 5px;background-color: #fff;
+        }   
+    .content-item{height: 200px;display: none;}
+    .actived a{color: #777777;}
+    .current{display: block;}
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <ul class="tab-nav">
+            <li ><a href="javascript:;">1</a></li>
+            <li ><a href="javascript:;">2</a></li>
+            <li><a href="javascript:;">3</a></li>
+            <li><a href="javascript:;">4</a></li>
+        </ul>
+
+        <div class="content-wrap">
+            <div class="content-item current">111111</div>
+            <div class="content-item">222222</div>
+            <div class="content-item">333333</div>
+            <div class="content-item">444444</div>
+        </div>
+    </div>
+</body>
+<script>
+    function show($li,$div){
+        this.$li=$li
+        this.$div=$div
+    }
+    show.prototype.ad=function(){
+
+    }
+
+    /*
+    var $li=document.getElementsByTagName("li")
+    var $div=document.getElementsByClassName("content-item")
+    $li[0].style.background = "purple" 
+    for(var i=0;i<$li.length;i++){
+        $li[i].index=i
+        $li[i].onclick=function (){
+            // console.log($div[this.index])
+            for(let j=0;j<$div.length;j++){
+               if(j==this.index) {
+                   console.log(this)
+                   $div[j].style.display= "block";
+                   $li[j].style.background = "purple" ;
+               }else{
+                $div[j].style.display= "none";
+                $li[j].style.background = "" ;
+               }
+            }
+        }
+    }
+ */
+</script>
+</html>
